@@ -56,14 +56,15 @@
             this.addPharmacist = add;
         }
     };
-    var pharmacist = new Pharmacist(1221,'a','21','Hanoi');
+    var pharmacist = new Pharmacist(1221,'Nguyen Van A','21','Hanoi');
     let id = pharmacist.getID();
     let name = pharmacist.getName();
     let age = pharmacist.getAge();
     let adds = pharmacist.getAddress();
+    alert("idPharmacist : " + id + "  namePharmacist : " + name + "  agePharmacist : " + age + "  addressPharmacist: " + adds);
     var pharmacist2 = new Pharmacist(1222, 'b', '23', 'HCM');
     pharmacist.addPharmacist(pharmacist2);
-
+    // em chưa làm được phần thêm và hiển thị sau update
 </script>
 </body>
 </html>
