@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Rat = function (name, weight, speed, status) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+        this.status = status;
+        this.status = true;
+        this.say = function () {
+            return console.log(this.name + " say that : chit chit !");
+        };
+        this.showStatus = function () {
+            if (this.status === true) {
+                console.log("Rat is alive !");
+            } else {
+                console.log("Rat death !");
+            }
+        }
+
+    };
+
+    let Cat = function (name, weight, maxSpeed) {
+        this.name = name;
+        this.weight = weight;
+        this.maxSpeed = maxSpeed;
+
+        this.say2 = function () {
+            return console.log(this.name + " say that : Meo Meo !");
+        };
+        this.catchRat = function () {
+            if (this.maxSpeed > rat.speed) {
+                return true;
+            }
+        };
+
+        this.eat = function () {
+            if (this.catchRat) {
+                console.log("Eating !");
+                rat.status = false;
+                this.weight += rat.weight;
+            } else {
+                console.log("Rat's gone");
+            }
+        }
+    };
+
+
+    let Miu = new Cat('Miu', 10, 20);
+    let rat = new Rat('Rat', 1, 10);
+    rat.say();
+    Miu.say2();
+    Miu.catchRat(rat);
+    rat.showStatus(rat);
+    Miu.eat();
+    rat.showStatus();
+    console.log("Weight of Miu : " + Miu.weight);
+</script>
+</body>
+</html>

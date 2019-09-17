@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    Pharmacist = function (id, name, age, address) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.getID = function () {
+            return this.id;
+        };
+        this.getName = function () {
+            return this.name;
+        };
+        this.getAge = function () {
+            return this.age;
+        };
+        this.getAddress = function () {
+            return this.address;
+        };
+        this.setID = function (id) {
+            this.id = id;
+        };
+        this.setName = function (name) {
+            this.name = name;
+        };
+        this.setAge = function (age) {
+            this.age = age;
+        };
+        this.setAddress = function (address) {
+            this.address = address;
+        };
+        this.addPharmacist = function (pharmacist) {
+
+        }
+    };
+    PharmacistManager = function (viewPharmacist, addPharmacist) {
+        this.viewPharmacist = viewPharmacist;
+        this.addPharmacist = addPharmacist;
+
+        this.getView = function () {
+            return this.viewPharmacist;
+        };
+        this.getAdd = function () {
+            return this.addPharmacist;
+        };
+        this.setView = function (view) {
+            this.viewPharmacist = view;
+        };
+        this.setAdd = function (add) {
+            this.addPharmacist = add;
+        }
+    };
+    var pharmacist = new Pharmacist(1221,'a','21','Hanoi');
+    let id = pharmacist.getID();
+    let name = pharmacist.getName();
+    let age = pharmacist.getAge();
+    let adds = pharmacist.getAddress();
+    var pharmacist2 = new Pharmacist(1222, 'b', '23', 'HCM');
+    pharmacist.addPharmacist(pharmacist2);
+
+</script>
+</body>
+</html>
